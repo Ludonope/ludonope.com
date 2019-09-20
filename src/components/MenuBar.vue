@@ -9,31 +9,31 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class MenuBar extends Vue {
-  private data() {
+  data () {
     return {
-      menuOptions: [
+      menuOptions:[
         {
           label: this.$t('menu.description'),
-          link: '#description',
+          link: '#description'
         },
         {
           label: this.$t('menu.experiences'),
-          link: '#experiences',
+          link: '#experiences'
         },
         {
           label: this.$t('menu.projects'),
-          link: '#projects',
+          link: '#projects'
         },
         {
           label: this.$t('menu.contacts'),
-          link: '#contacts',
-        },
-      ],
-    };
+          link: '#contacts'
+        }
+      ]
+    }
   }
 }
 </script>

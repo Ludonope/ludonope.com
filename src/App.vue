@@ -5,14 +5,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import MenuBar from '@/components/MenuBar.vue';
+import Vue from 'vue'
+import MenuBar from '@/components/MenuBar.vue'
 
 export default Vue.extend({
   components: {
-    MenuBar,
-  },
-});
+    MenuBar
+  }
+})
 </script>
 
 <style lang="scss" scoped>
