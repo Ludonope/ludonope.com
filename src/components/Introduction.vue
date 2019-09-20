@@ -36,8 +36,8 @@ export default class Introduction extends Vue {
     super()
     this.delays = {
       title: 500,
-      subtitle: 800,
-      icons: 800
+      subtitle: 600,
+      icons: 1000
     }
   }
 
@@ -116,38 +116,35 @@ export default class Introduction extends Vue {
 .fade-enter-active, .fade-leave-active {
   transition: opacity .8s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
 .slide-enter-active, .slice-leave-active {
   transition: all .8s ease-in-out;
 }
-.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.slide-enter, .slide-leave-to {
   opacity: 0;
   transform: translateY(-50px);
 }
 
-.slide-top-enter-active, .slide-top-leave-active {
-  transition: all .8s cubic-bezier(.51,.92,.24,1);
+.slide-top-enter-active, .slide-top-leave-active,
+.slide-left-enter-active, .slide-left-leave-active,
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all .6s cubic-bezier(.51,.92,.24,1);
 }
-.slide-top-enter, .slide-top-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.slide-top-enter, .slide-top-leave-to {
   opacity: 0;
   transform: translateY(-100px);
 }
 
-.slide-left-enter-active, .slide-left-leave-active {
-  transition: all .8s cubic-bezier(.51,.92,.24,1);
-}
-.slide-left-enter, .slide-left-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.slide-left-enter, .slide-left-leave-to {
   opacity: 0;
   transform: translateX(-100px);
 }
 
-.slide-right-enter-active, .slide-right-leave-active {
-  transition: all .8s cubic-bezier(.51,.92,.24,1);
-}
-.slide-right-enter, .slide-right-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.slide-right-enter, .slide-right-leave-to {
   opacity: 0;
   transform: translateX(100px);
 }
