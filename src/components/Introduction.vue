@@ -65,6 +65,7 @@ export default class Introduction extends Vue {
 }
 
 .content {
+  text-align: center;
   width: auto;
   height: 500px;
   display: grid;

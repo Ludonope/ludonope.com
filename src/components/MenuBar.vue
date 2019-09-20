@@ -4,8 +4,8 @@
       .home-button Ludovic Petrenko
       div
       .menu-buttons
-        .menu-button(v-for="(opt, i) of menuOptions" :key="i")
-          router-link.link(:to="opt.link") {{ opt.label }}
+        router-link.menu-button(v-for="(opt, i) of menuOptions" :key="i" :to="opt.link")
+          .link {{ opt.label }}
           .underline
 </template>
 
@@ -60,13 +60,13 @@ export default class MenuBar extends Vue {
 
 
   .menu-button {
+    text-decoration: none;
+    padding: 8px 12px;
+
     .link {
       color: white;
-      text-decoration: none;
       font-size: 17px;
     }
-
-    padding: 8px 12px;
 
     &:hover {
       .underline {
