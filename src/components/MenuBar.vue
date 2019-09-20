@@ -5,7 +5,8 @@
       div
       .menu-buttons
         .menu-button(v-for="(opt, i) of menuOptions" :key="i")
-          router-link.links(:to="opt.link") {{ opt.label }}
+          router-link.link(:to="opt.link") {{ opt.label }}
+          .underline
 </template>
 
 <script lang="ts">
@@ -52,12 +53,37 @@ export default class MenuBar extends Vue {
 .menu-buttons {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-column-gap: 40px;
+  grid-column-gap: 15px;
   margin-right: 100px;
+  align-items: center;
+  justify-items: center;
+
+
+  .menu-button {
+    .link {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    padding: 8px 12px;
+
+    &:hover {
+      .underline {
+        transform: scaleX(1);
+      }
+    }
+
+    .underline {
+      transition: transform .1s ease-in-out;
+      width: auto;
+      transform: scaleX(0);
+      height: 3px;
+      border-radius: 3px;
+      background-color: white;
+      margin: 5px 15px 0 15px;
+    }
+  }
 }
 
-.links {
-  color: white;
-  text-decoration: none;
-}
 </style>
