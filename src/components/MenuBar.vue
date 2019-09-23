@@ -1,10 +1,13 @@
 <template lang="pug">
   div
     .main-menu
-      .home-button Ludovic Petrenko
       div
       .menu-buttons
-        router-link.menu-button(v-for="(opt, i) of menuOptions" :key="i" :to="opt.link")
+        router-link.menu-button(
+          v-for="(opt, i) of menuOptions"
+          :key="i"
+          :to="opt.link"
+        )
           .link {{ opt.label }}
           .underline
 </template>
@@ -46,7 +49,7 @@ export default class MenuBar extends Vue {
 .main-menu {
   color: white;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   padding: 20px;
 }
 

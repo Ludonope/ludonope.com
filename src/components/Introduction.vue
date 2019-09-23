@@ -1,11 +1,11 @@
 <template lang="pug">
   .background
-    .content
+    .content(:class="$mq")
       div
       transition(name="fade")
         .title(v-show="!delays.title") LUDOVIC PETRENKO
       transition(name="slide")
-        .subtitle(v-show="!delays.subtitle") Full Stack Software Engineer
+        .subtitle(v-show="!delays.subtitle") {{ $t('intro.subtitle') }}
       .links
         transition(name="slide-left")
           a.link(v-show="!delays.icons" href="https://github.com/Ludonope" alt="GitHub" title="GitHub")
@@ -21,13 +21,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import RoundButton from '@/components/RoundButton.vue'
 
 @Component({
-  name: 'Introduction',
-  components: {
-    RoundButton
-  }
+  name: 'Introduction'
 })
 export default class Introduction extends Vue {
   delays: any
@@ -36,7 +32,7 @@ export default class Introduction extends Vue {
     super()
     this.delays = {
       title: 500,
-      subtitle: 600,
+      subtitle: 200,
       icons: 1000
     }
   }
@@ -67,10 +63,17 @@ export default class Introduction extends Vue {
 .content {
   text-align: center;
   width: auto;
-  height: 500px;
   display: grid;
   align-items: center;
-  grid-template-rows: 20% 30% 10% 40%;
+
+  &.tablet-landscape, &.desktop, &.large-desktop {
+    height: 500px;
+    grid-template-rows: 10% 40% 10% 40%;
+  }
+  &.phone, &.tablet-portrait {
+    height: 700px;
+    grid-template-rows: 20% 30% 20% 30%;
+  }
 }
 
 .title {
@@ -114,13 +117,6 @@ export default class Introduction extends Vue {
 </style>
 
 <style lang="scss">
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .8s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
 .slide-enter-active, .slice-leave-active {
   transition: all .8s ease-in-out;
 }
