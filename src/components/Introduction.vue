@@ -4,11 +4,11 @@
     .content(:class="$mq")
       div
       transition(name="fade")
-        .title(v-show="!delays.title")
+        .title(v-show="!delays.title" :class="$mq")
           .first Ludovic
           .last PETRENKO
       transition(name="slide")
-        .subtitle(v-show="!delays.subtitle") {{ $t('intro.subtitle') }}
+        .subtitle(v-show="!delays.subtitle" :class="$mq") {{ $t('intro.subtitle') }}
       .links
         transition(name="slide-left")
           a.link(v-show="!delays.icons" href="https://github.com/Ludonope" alt="GitHub" title="GitHub")
@@ -59,7 +59,7 @@ export default class Introduction extends Vue {
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  height: 900px;
+  height: 100vh;
   // background: black;
   color: white;
   display: grid;
@@ -81,29 +81,32 @@ export default class Introduction extends Vue {
   width: auto;
   display: grid;
   align-items: center;
+  grid-template-rows: 28% 22% 10% 40%;
+  height: 500px;
 
-  &.tablet-landscape, &.desktop, &.large-desktop {
-    height: 500px;
-    // grid-template-rows: 50% 10% 30%;
-    grid-template-rows: 28% 22% 10% 40%;
-  }
   &.phone, &.tablet-portrait {
-    height: 700px;
-    // grid-template-rows: 60% 20% 20%;
-    grid-template-rows: 30% 20% 20% 30%;
+    height: 400px;
   }
   z-index: 0;
 }
 
 .title {
   font-weight: 100;
-  font-size: 90px;
   display: grid;
   width: 100%;
   grid-column-gap: 20px;
   justify-content: center;
   grid-template-columns: repeat(2, auto);
   grid-row-gap: 20px;
+
+  font-size: 90px;
+  &.tablet-portrait {
+    font-size: 60px;
+  }
+  &.phone {
+    font-size: 33px;
+  }
+  
   .first {
     grid-column: 1 / 2;
     // grid-row: 1 / 2;
@@ -124,6 +127,12 @@ export default class Introduction extends Vue {
 .subtitle {
   font-family: 'Roboto';
   font-size: 40px;
+  &.tablet-portrait {
+    font-size: 30px;
+  }
+  &.phone {
+    font-size: 22px;
+  }
   font-weight: 200;
   text-align: center;
 }
