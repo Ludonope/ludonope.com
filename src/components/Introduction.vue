@@ -1,9 +1,12 @@
 <template lang="pug">
-  .background
+  .container
+    Particles.background
     .content(:class="$mq")
       div
       transition(name="fade")
-        .title(v-show="!delays.title") LUDOVIC PETRENKO
+        .title(v-show="!delays.title")
+          .first Ludovic
+          .last PETRENKO
       transition(name="slide")
         .subtitle(v-show="!delays.subtitle") {{ $t('intro.subtitle') }}
       .links
@@ -21,9 +24,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
+import Particles from '@/components/Particles'
 
 @Component({
-  name: 'Introduction'
+  name: 'Introduction',
+  components: {
+    Particles
+  }
 })
 export default class Introduction extends Vue {
   delays: any
@@ -50,14 +57,23 @@ export default class Introduction extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.background {
+.container {
   width: 100%;
   height: 900px;
-  background: black;
+  // background: black;
   color: white;
   display: grid;
   align-content: center;
   justify-content: center;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .content {
@@ -68,18 +84,41 @@ export default class Introduction extends Vue {
 
   &.tablet-landscape, &.desktop, &.large-desktop {
     height: 500px;
-    grid-template-rows: 10% 40% 10% 40%;
+    // grid-template-rows: 50% 10% 30%;
+    grid-template-rows: 28% 22% 10% 40%;
   }
   &.phone, &.tablet-portrait {
     height: 700px;
-    grid-template-rows: 20% 30% 20% 30%;
+    // grid-template-rows: 60% 20% 20%;
+    grid-template-rows: 30% 20% 20% 30%;
   }
+  z-index: 0;
 }
 
 .title {
-  font-family: 'Roboto';
-  font-weight: 400;
+  font-weight: 100;
   font-size: 90px;
+  display: grid;
+  width: 100%;
+  grid-column-gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  grid-row-gap: 20px;
+  .first {
+    grid-column: 1 / 2;
+    // grid-row: 1 / 2;
+    font-family: 'ZwizzRegular';
+  }
+
+  .last {
+    grid-column: 2 / 3;
+    font-family: 'ZwizzBold';
+  }
+
+  .all {
+    grid-column: 1 / 4;
+    grid-row: 1/ 3;
+  }
 }
 
 .subtitle {
