@@ -1,9 +1,9 @@
 {
   "menu": {
-    "description": "Description",
-    "experiences": "Experiences",
-    "projects": "Projects",
-    "contacts": "Contacts"
+    "description": "INTRO",
+    "experiences": "EXPERIENCES",
+    "projects": "PROJECTS",
+    "contacts": "CONTACTS"
   },
   "intro": {
     "subtitle": "Full Stack Software Engineer"
