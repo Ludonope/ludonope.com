@@ -18,7 +18,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .menu-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -33,8 +33,30 @@ export default Vue.extend({
 </style>
 
 <style lang="scss">
+@font-face {
+  font-family: 'ZwizzBold';
+  src:  url('assets/fonts/Zwizz-Bold.eot');
+  src:  url('assets/fonts/Zwizz-Bold.eot?#iefix') format("embedded-opentype"),
+        url('assets/fonts/Zwizz-Bold.woff') format("woff"),
+        url('assets/fonts/Zwizz-Bold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ZwizzRegular';
+  src:  url('assets/fonts/Zwizz-Regular.eot');
+  src:  url('assets/fonts/Zwizz-Regular.eot?#iefix') format("embedded-opentype"),
+        url('assets/fonts/Zwizz-Regular.woff') format("woff"),
+        url('assets/fonts/Zwizz-Regular.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:Light,Thin&display=swap');
+
 #app {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
