@@ -1,7 +1,7 @@
 <template lang="pug">
   .home
-    Introduction.section
-    Projects.section
+    Introduction.section#intro
+    Projects.section#projects
 </template>
 
 <script lang="ts">
@@ -22,5 +22,9 @@ export default class Home extends Vue {
 <style lang="scss" scoped>
 .section {
   min-height: 100vh;
+}
+
+#projects {
+  padding-top: 50px;
 }
 </style>
