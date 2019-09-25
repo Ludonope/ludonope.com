@@ -3,15 +3,19 @@
     router-view
     mq-layout(mq="tablet-landscape+")
       MenuBar.menu-bar
+    mq-layout(:mq="['phone', 'tablet-portrait']")
+      LangPicker.picker
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import MenuBar from '@/components/MenuBar.vue'
+import LangPicker from '@/components/LangPicker.vue'
 
 export default Vue.extend({
   components: {
-    MenuBar
+    MenuBar,
+    LangPicker
   }
 })
 </script>
@@ -23,6 +27,12 @@ export default Vue.extend({
   left: 0;
   width: 100%;
   height: 90px;
+}
+
+.picker {
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 
 #app {

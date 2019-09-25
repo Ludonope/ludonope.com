@@ -10,34 +10,38 @@
         )
           .link {{ opt.label }}
           .underline
+      LangPicker
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import LangPicker from '@/components/LangPicker.vue'
 
-@Component
+@Component({
+  components: {
+    LangPicker
+  }
+})
 export default class MenuBar extends Vue {
-  data () {
-    return {
-      menuOptions:[
-        {
-          label: this.$t('menu.description'),
-          link: '#description'
-        },
-        {
-          label: this.$t('menu.experiences'),
-          link: '#experiences'
-        },
-        {
-          label: this.$t('menu.projects'),
-          link: '#projects'
-        },
-        {
-          label: this.$t('menu.contacts'),
-          link: '#contacts'
-        }
-      ]
-    }
+  get menuOptions() {
+    return [
+      {
+        label: this.$t('menu.description'),
+        link: '#description'
+      },
+      {
+        label: this.$t('menu.experiences'),
+        link: '#experiences'
+      },
+      {
+        label: this.$t('menu.projects'),
+        link: '#projects'
+      },
+      {
+        label: this.$t('menu.contacts'),
+        link: '#contacts'
+      }
+    ]
   }
 }
 </script>
@@ -49,15 +53,16 @@ export default class MenuBar extends Vue {
 .main-menu {
   color: white;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   padding: 20px;
+  margin-right: 20px;
 }
 
 .menu-buttons {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-column-gap: 15px;
-  margin-right: 100px;
+  margin-right: 20px;
   align-items: center;
   justify-items: center;
   font-weight: 300;
