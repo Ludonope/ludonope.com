@@ -60,6 +60,7 @@ export default class MenuBar extends Vue {
   margin-right: 100px;
   align-items: center;
   justify-items: center;
+  font-weight: 300;
 
 
   .menu-button {
