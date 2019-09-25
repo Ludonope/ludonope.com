@@ -12,15 +12,15 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 interface Particle {
-  x: number;
-  y: number;
-  size: number;
-  ratio: number;
-  opacity: number;
+  x: number
+  y: number
+  size: number
+  ratio: number
+  opacity: number
 }
 
 @Component({})
-export default class Particles extends Vue{
+export default class Particles extends Vue {
   items: Particle[]
 
   constructor () {
@@ -49,7 +49,7 @@ export default class Particles extends Vue{
       item.x *= r
       item.y *= r
       item.size *= r
-      
+
       if (item.size > 6) {
         item.opacity = 1
       } else {

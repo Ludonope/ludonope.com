@@ -23,7 +23,7 @@ import LangPicker from '@/components/LangPicker.vue'
   }
 })
 export default class MenuBar extends Vue {
-  get menuOptions() {
+  get menuOptions () {
     return [
       {
         label: this.$t('menu.description'),

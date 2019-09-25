@@ -11,7 +11,7 @@ import { Vue, Component } from 'vue-property-decorator'
   name: 'LangPicker'
 })
 export default class LangPicker extends Vue {
-  pick(locale: string) {
+  pick (locale: string) {
     this.$i18n.locale = locale
     // this.$i18n.fallbackLocale = locale
   }

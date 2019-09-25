@@ -24,7 +24,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import Particles from '@/components/Particles'
+import Particles from '@/components/Particles.vue'
 
 @Component({
   name: 'Introduction',
