@@ -42,7 +42,9 @@ export default class Bio extends Vue {
 }
 
 .text {
-  max-width: 600px;
+  max-width: 850px;
   text-align: center;
+  font-size: 23px;
+  line-height: 1.3em;
 }
 </style>
