@@ -19,7 +19,7 @@
     },
     "blt": {
       "date": "January 2018 - July 2018",
-      "description": "'Beach Launch Team is a liquid-fueled rocketry club at California State University Long Beach. I worked on a live vehicle tajectory visualization using Cesium.js. I also participated to a static fire and launch attempt for the FAR-Mars competition. Finally, I met amazing people there."
+      "description": "Beach Launch Team is a liquid-fueled rocketry club at California State University Long Beach. I worked on a live vehicle tajectory visualization using Cesium.js. I also participated to a static fire and launch attempt for the FAR-Mars competition. Finally, I met amazing people there."
     },
     "rematch": {
       "date": "April 2018 - Today",
@@ -28,6 +28,16 @@
     "manacore": {
       "date": "September 2017 - Today",
       "description": "Manacore is a powerful modular ERP SaaS that provides your company with a collection of easy to use services, 100% customizable. It uses the AWS ecosystem (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) and a homemade module system in Vue.js. This is my senior project with 5 other Epitech students."
+    }
+  },
+  "educations": {
+    "csulb": {
+      "diploma": "Study Abroad @ The Beach",
+      "date": "Spring semester 2019"
+    },
+    "epitech": {
+      "diploma": "Graduate Diploma in Information Technology",
+      "date": "2015 - 2020"
     }
   }
 }

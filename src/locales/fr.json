@@ -29,5 +29,15 @@
       "date": "Septembre 2017 - Aujourd'hui",
       "description": "Manacore est un logiciel de gestion modulaire en SaaS qui fournit à votre entreprise une multitude de services faciles à utiliser, 100% personalisable. Manacore utilises l'écosystème AWS (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) et un système modulaire fait maison en Vue.js. Manacore est mon projet de fin d'études avec 5 autres étudiants."
     }
+  },
+  "educations": {
+    "csulb": {
+      "diploma": "Study Abroad @ The Beach",
+      "date": "Semestre printemps 2019"
+    },
+    "epitech": {
+      "diploma": "Expert en Technologie de l'Information",
+      "date": "2015 - 2020"
+    }
   }
 }
