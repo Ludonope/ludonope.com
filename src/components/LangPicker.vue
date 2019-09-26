@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
-    img(src="@/assets/img/france-flag-icon-32.png" @click="pick('fr')")
-    img(src="@/assets/img/united-states-of-america-flag-icon-32.png" @click="pick('en')")
+    img(src="@/assets/img/FR.png" @click="pick('fr')")
+    img(src="@/assets/img/US.png" @click="pick('en')")
 </template>
 
 <script lang="ts">
@@ -19,12 +19,11 @@ export default class LangPicker extends Vue {
 
 <style lang="scss" scoped>
 .container {
-  padding: 8px 12px;
+  padding: 4px 12px;
 }
 
 img {
   cursor: pointer;
-  height: 18px;
   margin-right: 10px;
 }
 </style>
