@@ -144,7 +144,7 @@ export default class Timeline extends Vue {
   }
 
   .dot {
-    right: -36px;
+    right: -36.5px;
   }
 }
 
@@ -185,7 +185,7 @@ export default class Timeline extends Vue {
   grid-column: 3 / 4;
 
   .dot {
-    left: -36px;
+    left: -36.5px;
   }
 }
 
