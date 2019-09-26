@@ -6,7 +6,8 @@
     "contacts": "CONTACTS"
   },
   "intro": {
-    "subtitle": "Full Stack Software Engineer"
+    "subtitle": "Full Stack Software Engineer",
+    "bio": "At the age of 8, I searched “how to hack” on google. This lead me to discover the world of computer science and programming beginning with C, then C++. This allowed me in my youth to hone my skills with algorithms and object-oriented programming. From then on, I have continued to follow this childhood dream, which has now become a full fledged passion."
   },
   "experiences": {
     "labels": {
