@@ -43,9 +43,9 @@ export default class Particles extends Vue {
     }
   }
 
-  refresh () {
+  refresh (power = 1) {
     for (const item of this.items) {
-      const r = 1.001 * item.ratio
+      const r = Math.pow(1.001 * item.ratio, power)
       item.x *= r
       item.y *= r
       item.size *= r
@@ -71,8 +71,8 @@ export default class Particles extends Vue {
 
   mounted () {
     this.refill()
-    for (let i = 0; i < 800; i++) {
-      this.refresh()
+    for (let i = 0; i < 10; i++) {
+      this.refresh(100)
       this.refill()
     }
     setInterval(() => {
