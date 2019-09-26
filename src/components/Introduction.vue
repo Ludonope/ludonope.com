@@ -2,7 +2,6 @@
   .container
     Particles.background
     .content(:class="$mq")
-      div
       transition(name="fade")
         .title(v-show="!delays.title" :class="$mq")
           .first Ludovic
@@ -81,11 +80,12 @@ export default class Introduction extends Vue {
   width: auto;
   display: grid;
   align-items: center;
-  grid-template-rows: 28% 22% 10% 40%;
-  height: 500px;
+  margin-top: 40px;
+  grid-template-rows: 30% 14% 56%;
+  height: 360px;
 
   &.phone, &.tablet-portrait {
-    height: 400px;
+    height: 290px;
   }
   z-index: 0;
 }
