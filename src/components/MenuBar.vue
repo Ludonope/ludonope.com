@@ -50,14 +50,11 @@ export default class MenuBar extends Vue {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-
 .main-menu {
-  color: white;
   display: grid;
   grid-template-columns: 1fr auto auto;
+
   padding: 20px;
   margin-right: 20px;
 }
@@ -66,11 +63,11 @@ export default class MenuBar extends Vue {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-column-gap: 15px;
-  margin-right: 20px;
   align-items: center;
   justify-items: center;
-  font-weight: 300;
 
+  margin-right: 20px;
+  font-weight: 300;
 
   .menu-button {
     text-decoration: none;
@@ -81,10 +78,8 @@ export default class MenuBar extends Vue {
       font-size: 17px;
     }
 
-    &:hover {
-      .underline {
-        transform: scaleX(1);
-      }
+    &:hover > .underline {
+      transform: scaleX(1);
     }
 
     .underline {

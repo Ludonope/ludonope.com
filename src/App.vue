@@ -59,7 +59,7 @@ export default Vue.extend({
   src:  url('assets/fonts/Zwizz-Regular.eot?#iefix') format("embedded-opentype"),
         url('assets/fonts/Zwizz-Regular.woff') format("woff"),
         url('assets/fonts/Zwizz-Regular.woff2') format("woff2");
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -74,6 +74,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
+  color: white;
 }
 
 .fade-enter-active, .fade-leave-active {

@@ -7,6 +7,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import Timeline, { Item } from '@/components/Timeline.vue'
 
 @Component({
+  name: 'Projects',
   components: {
     Timeline
   }

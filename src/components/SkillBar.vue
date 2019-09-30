@@ -63,24 +63,24 @@ export default class SkillBar extends Vue {
 
 .skill-container {
   display: grid;
+  align-items: center;
 
+  // Most devices
   &.tablet-portrait, &.tablet-landscape, &.desktop,  &.large-desktop {
     grid-template-columns: 1fr 250px;
     justify-content: space-between;
   }
 
+  // Very small devices only
   &.phone {
     width: 60%;
     margin: auto;
     grid-template-rows: 25px 25px;
   }
-  align-items: center;
 }
 
 .skill-name {
-  color: white;
   justify-self: left;
-  // background-color: red;
 }
 
 .skill-bar {

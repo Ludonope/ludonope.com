@@ -32,7 +32,6 @@ export default class Bio extends Vue {
       for (let i in this.delays) {
         sum += this.delays[i]
         setTimeout(() => {
-          // this.delays[i] = 0
           Vue.set(this.delays, i, 0)
         }, sum)
       }

@@ -98,12 +98,10 @@ export default class Timeline extends Vue {
   display: grid;
   align-content: start;
   grid-template-rows: 100px 1fr;
-  color: white;
   height: 100%;
 }
 
 .skills {
-  color: white;
   display: grid;
   grid-template-columns: 1fr;
   width: 450px;

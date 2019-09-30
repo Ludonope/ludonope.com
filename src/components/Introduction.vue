@@ -60,7 +60,6 @@ export default class Introduction extends Vue {
   width: 100%;
   height: 100vh;
   // background: black;
-  color: white;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -109,7 +108,6 @@ export default class Introduction extends Vue {
   
   .first {
     grid-column: 1 / 2;
-    // grid-row: 1 / 2;
     font-family: 'ZwizzRegular';
   }
 

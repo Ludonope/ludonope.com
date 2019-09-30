@@ -42,19 +42,22 @@ export default class Home extends Vue {
 }
 
 .quarter-section {
-  min-height: 40vh;
+  min-height: 40vh; // Not really a quarter tho
 }
 
 #projects {
   padding-top: 50px;
 }
 
+// Display education and skill side by side or above each other
+// depending on the screen size
 .eduskills {
   display: grid;
   justify-content: center;
   align-items: center;
   justify-items: center;
 
+  // Small devices, two rows
   &.phone, &.tablet-portrait {
     grid-template-rows: auto auto;
     grid-row-gap: 150px;
@@ -70,6 +73,7 @@ export default class Home extends Vue {
     }
   }
 
+  // Large devices, two columns
   &.tablet-landscape, &.desktop, &.large-desktop {
     grid-template-columns: 1fr 1fr;
 

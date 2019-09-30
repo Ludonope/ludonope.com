@@ -113,7 +113,6 @@ export default class Timeline extends Vue {
 
 .timeline {
   margin: 30px;
-  color: white;
   display: grid;
   justify-content: center;
 
@@ -133,7 +132,6 @@ export default class Timeline extends Vue {
 .line {
   background-color: white;
   grid-column: 2 / 3;
-  // height: 300px;
   width: 3px;
   margin-top: 6px;
   transition-property: height;

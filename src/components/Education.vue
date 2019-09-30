@@ -84,7 +84,6 @@ export default class Education extends Vue {
   display: grid;
   align-content: start;
   grid-template-rows: 100px 1fr;
-  color: white;
   height: 100%;
 }
 
