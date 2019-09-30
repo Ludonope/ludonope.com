@@ -4,7 +4,7 @@
     .content(:class="$mq")
       transition(name="fade")
         .title(v-show="!delays.title" :class="$mq")
-          .first Ludovic
+          .first LUDOVIC
           .last PETRENKO
       transition(name="slide")
         .subtitle(v-show="!delays.subtitle" :class="$mq") {{ $t('intro.subtitle') }}

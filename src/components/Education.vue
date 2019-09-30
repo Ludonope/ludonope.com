@@ -2,7 +2,7 @@
   .education-container
     .education(v-observe-visibility="visibilityChanged")
       template(v-for="(item, i) of items")
-        .item(:class="delays[i] === 0 ? 'visible' : ''" :key="i")
+        .item(:class="(delays[i] === 0 ? 'visible ' : '') + $mq" :key="i")
           .school {{ item.school }}
           .diploma {{ item.diploma }}
           .date {{ item.date }}
@@ -50,16 +50,12 @@ export default class Education extends Vue {
   }
 
   resetDelays () {
-    console.log('reset')
-    // this.delays.fill(300)
     for (const i in this.delays) {
       Vue.set(this.delays, i, 300)
     }
-    console.log(this.delays)
   }
 
   revealItems () {
-    console.log('reveal')
     const items = this.items ? this.items.length : 0
     let sum = 0
     let j = 0
@@ -67,24 +63,29 @@ export default class Education extends Vue {
       sum += this.delays[i]
       setTimeout(() => {
         Vue.set(this.delays, i, 0)
-        console.log('delay', i, 0)
       }, sum)
     }
   }
 
   visibilityChanged (isVisible: boolean, entry: any) {
-    isVisible ? this.revealItems() : this.resetDelays()
+    if (isVisible) {
+      this.revealItems()
+    } else if (entry.boundingClientRect.top >= 0) {
+      this.resetDelays()
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .education-container {
-  width: 100%;
+  max-width: 100%;
+  display: grid;
+  align-content: center;
 }
 
 .education {
-  margin: 30px;
+  // margin: 30px;
   color: white;
   display: grid;
   justify-content: center;
@@ -124,8 +125,18 @@ export default class Education extends Vue {
   }
 
   .diploma {
-    margin-top: 5px;
+    margin: 3px 0;
     max-width: 500px;
+  }
+
+  &.phone {
+    .date {
+      font-size: 10px;
+    }
+
+    .school {
+      font-size: 15px;
+    }
   }
 }
 </style>

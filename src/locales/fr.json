@@ -1,8 +1,9 @@
 {
   "menu": {
-    "description": "INTRO",
-    "experiences": "EXPÉRIENCES",
+    "intro": "INTRO",
     "projects": "PROJETS",
+    "education": "ÉDUCATION",
+    "skills": "COMPÉTENCES",
     "contacts": "CONTACT"
   },
   "intro": {
@@ -15,19 +16,19 @@
     },
     "ludonope": {
       "date": "Septembre 2019",
-      "description": "Un site web responsive, multilangue et animé fait à la main avec Vue.js, Typescript et du savoir."
+      "description": "Un site web responsive, multilingue et animé que j'ai développé avec Vue.js, Typescript et mes connaissances."
     },
     "blt": {
       "date": "Janvier 2018 - Juillet 2018",
-      "description": "Beach Launch Team est un club de fusée à ergols liquide à California State University Long Beach. J'ai travaillé sur un logiciel de visualisation live de la trajectoire du véhicule avec Cesium.js. J'ai également participé à une mise à feu statique et une tentative de décollage pour la compétition FAR-Mars. Enfin, j'ai rencontré des gens incroyable."
+      "description": "Beach Launch Team est un club de fusée à ergols liquide basé sur le campus de la California State University Long Beach. J'ai développé le logiciel de visualisation en temps réel de la trajectoire du véhicule avec Cesium.js. J'ai également participé à une mise à feu statique et une tentative de décollage pour la compétition FAR-Mars. Au delà de l'expérience technique, ce club m'a permis de rencontrer des personnes incroyables."
     },
     "rematch": {
       "date": "Avril 2018 - Aujourd'hui",
-      "description": "Rematch est une application qui permet de facilement capturer les meilleurs moments du sport amateur. J'ai dirigé la mise en place d'un nouveau backend avec AWS (Lambda, API Gateway, Cognito, EC2) et Go. J'ai également guidé la mise en place d'un nouveau frontend en Vue.js et le déploiement sur AWS (S3, Cloudfront)."
+      "description": "Rematch est une application qui permet de capturer les meilleurs moments du sport amateur en un clic. J'ai conçu et implémenté le nouveau backend avec AWS (Lambda, API Gateway, Cognito, EC2) et Go. J'ai également mené la mise en oeuvre d'un nouveau frontend en Vue.js ainsi que son déploiement sur AWS (S3, Cloudfront)."
     },
     "manacore": {
       "date": "Septembre 2017 - Aujourd'hui",
-      "description": "Manacore est un logiciel de gestion modulaire en SaaS qui fournit à votre entreprise une multitude de services faciles à utiliser, 100% personalisable. Manacore utilises l'écosystème AWS (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) et un système modulaire fait maison en Vue.js. Manacore est mon projet de fin d'études avec 5 autres étudiants."
+      "description": "Manacore est un logiciel de gestion modulaire en SaaS qui fournit à votre entreprise une multitude de services faciles à utiliser et 100% personalisable. Manacore utilises l'écosystème AWS (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) et un système  spécifique de modules développé pour l'application web en Vue.js. Manacore est mon projet de fin d'études avec 5 autres étudiants d'Epitech. Sa conception est réalisée en partenariat avec l'Association des Paralysés de France."
     }
   },
   "educations": {

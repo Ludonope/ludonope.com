@@ -96,7 +96,11 @@ export default class Timeline extends Vue {
   }
 
   visibilityChanged (isVisible: boolean, entry: any) {
-    isVisible ? this.revealItems() : this.resetDelays()
+    if (isVisible) {
+      this.revealItems()
+    } else if (entry.boundingClientRect.top >= 0) {
+      this.resetDelays()
+    }
   }
 }
 </script>

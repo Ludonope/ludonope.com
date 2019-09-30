@@ -1,9 +1,12 @@
 <template lang="pug">
   .home
     Introduction.section#intro
-    Bio
+    Bio.section#description
     Projects.section#projects
-    Education.section#education
+    .semi-section.eduskills(:class="$mq")
+      Education#education
+      Skills#skills
+    Contacts.quarter-section#contacts
 </template>
 
 <script lang="ts">
@@ -12,13 +15,17 @@ import Introduction from '@/components/Introduction.vue'
 import Bio from '@/components/Bio.vue'
 import Projects from '@/components/Projects.vue'
 import Education from '@/components/Education.vue'
+import Skills from '@/components/Skills.vue'
+import Contacts from '@/components/Contacts.vue'
 
 @Component({
   components: {
     Introduction,
     Bio,
     Projects,
-    Education
+    Education,
+    Skills,
+    Contacts
   }
 })
 export default class Home extends Vue {
@@ -30,7 +37,49 @@ export default class Home extends Vue {
   min-height: 100vh;
 }
 
+.semi-section {
+  min-height: 60vh;
+}
+
+.quarter-section {
+  min-height: 30vh;
+}
+
 #projects {
   padding-top: 50px;
+}
+
+.eduskills {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  &.phone, &.tablet-portrait {
+    grid-template-rows: auto auto;
+    grid-row-gap: 150px;
+    margin: 100px 0;
+    
+    #education {
+      grid-row: 1 / 2;
+    }
+
+    #skills {
+      grid-row: 2 / 3;
+      justify-self: left;
+    }
+  }
+
+  &.tablet-landscape, &.desktop, &.large-desktop {
+    grid-template-columns: 1fr 1fr;
+
+    #education {
+      grid-column: 1 / 2;
+    }
+
+    #skills {
+      grid-column: 2 / 3;
+    }
+  }
 }
 </style>

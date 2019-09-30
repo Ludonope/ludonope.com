@@ -26,16 +26,20 @@ export default class MenuBar extends Vue {
   get menuOptions () {
     return [
       {
-        label: this.$t('menu.description'),
-        link: '#description'
-      },
-      {
-        label: this.$t('menu.experiences'),
-        link: '#experiences'
+        label: this.$t('menu.intro'),
+        link: '#intro'
       },
       {
         label: this.$t('menu.projects'),
         link: '#projects'
+      },
+      {
+        label: this.$t('menu.education'),
+        link: '#education'
+      },
+      {
+        label: this.$t('menu.skills'),
+        link: '#skills'
       },
       {
         label: this.$t('menu.contacts'),
@@ -60,7 +64,7 @@ export default class MenuBar extends Vue {
 
 .menu-buttons {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   grid-column-gap: 15px;
   margin-right: 20px;
   align-items: center;

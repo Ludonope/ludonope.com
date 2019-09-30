@@ -20,12 +20,12 @@ export default class Bio extends Vue {
   }
 
   visibilityChanged (isVisible: boolean, entry: any) {
-    this.delay = 200
-
     if (isVisible) {
       setTimeout(() => {
         this.delay = 0
       }, this.delay)
+    } else if (entry.boundingClientRect.top >= 0) {
+      this.delay = 200
     }
   }
 }
