@@ -19,16 +19,16 @@
       "description": "A responsive, multilingual and animated website that I created with with Vue.js, Typescript and knowledge."
     },
     "blt": {
-      "date": "January 2018 - July 2018",
-      "description": "Beach Launch Team is a liquid-fueled rocketry club at California State University Long Beach. I developed a live vehicle tajectory visualization software using Cesium.js. I also participated to a static fire and launch attempt for the FAR-Mars competition. Moreover, that experience allowed me to meet incredible people there."
+      "date": "January 2019 - July 2019",
+      "description": "Beach Launch Team is a liquid-fueled rocketry club at California State University Long Beach. I developed a live vehicle tajectory visualization software using Cesium.js. I also participated to a static fire and launch attempt for the FAR-Mars competition. Moreover, that experience allowed me to meet incredible people, and further my computer science skills."
     },
     "rematch": {
       "date": "April 2018 - Today",
-      "description": "Rematch is an app which allows you to easily capture the best moments of amateur sport. I lead the setup of a new backend using AWS (Lambda, API Gateway, Cognito, EC2) and Go. I also guided the setup of the new frontend in Vue.js and deployment on AWS (S3, Cloudfront)."
+      "description": "Rematch is an app which allows you to easily capture the best moments of amateur sport. I led the setup of a new backend using AWS (Lambda, API Gateway, Cognito, EC2) and Go. I also helped guide the setup of the new frontend in Vue.js and deployment on AWS (S3, Cloudfront)."
     },
     "manacore": {
       "date": "September 2017 - Today",
-      "description": "Manacore is a powerful modular ERP SaaS that provides your company with a collection of easy to use services, 100% customizable. It uses the AWS ecosystem (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) and a homemade module system in Vue.js. This is my senior project with 5 other Epitech students. It is developed in partnership with the \"Association des Paralysés de France\" (French association for paralyzed individuals)"
+      "description": "Manacore is a powerful modular ERP SaaS that provides your company with a collection of easy to use services, 100% customizable - it uses the AWS ecosystem (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) and a homemade module system in Vue.js. This is my senior project that I'm working on with 5 other Epitech students. It is developed in partnership with the \"Association des Paralysés de France\" (French association for paralyzed individuals)."
     }
   },
   "educations": {
