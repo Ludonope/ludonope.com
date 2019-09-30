@@ -108,12 +108,12 @@ export default class Introduction extends Vue {
   
   .first {
     grid-column: 1 / 2;
-    font-family: 'ZwizzRegular';
+    font-family: 'ZwizzRegular', 'Roboto', 'Arial';
   }
 
   .last {
     grid-column: 2 / 3;
-    font-family: 'ZwizzBold';
+    font-family: 'ZwizzBold', 'Roboto', 'Arial';
   }
 
   .all {
