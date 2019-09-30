@@ -1,5 +1,7 @@
 <template lang="pug">
   .skills-container
+    transition(name="fade")
+      .title(v-show="!delays[0]")  {{ $t('menu.skills') }}
     .skills(v-observe-visibility="visibilityChanged" :class="$mq")
       .item(v-for="(item, i) of items" :key="i")
         SkillBar(:enabled="!delays[i]" :name="item.name" :value="item.value")
@@ -92,12 +94,22 @@ export default class Timeline extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.skills-container {
+  max-width: 100%;
+  display: grid;
+  align-content: start;
+  grid-template-rows: 100px 1fr;
+  color: white;
+  height: 100%;
+}
+
 .skills {
   color: white;
   display: grid;
   grid-template-columns: 1fr;
   width: 450px;
   justify-content: space-between;
+  align-content: center;
 
   grid-auto-rows: auto;
   grid-row-gap: 30px;
@@ -105,5 +117,11 @@ export default class Timeline extends Vue {
   &.phone {
     width: 100vw;
   }
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  align-self: center;
 }
 </style>

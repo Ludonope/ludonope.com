@@ -51,6 +51,7 @@ export default class Bio extends Vue {
   display: grid;
   grid-template-rows: 0px 60px 60px 60px;
   justify-content: center;
+  align-content: center;
   padding-top: 50px;
   position: relative;
 

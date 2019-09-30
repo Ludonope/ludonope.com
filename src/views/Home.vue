@@ -38,11 +38,11 @@ export default class Home extends Vue {
 }
 
 .semi-section {
-  min-height: 60vh;
+  min-height: 50vh;
 }
 
 .quarter-section {
-  min-height: 30vh;
+  min-height: 40vh;
 }
 
 #projects {

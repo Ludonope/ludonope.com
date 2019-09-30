@@ -1,5 +1,7 @@
 <template lang="pug">
   .education-container
+    transition(name="fade")
+      .title(v-show="!delays[0]") {{ $t('menu.education') }}
     .education(v-observe-visibility="visibilityChanged")
       template(v-for="(item, i) of items")
         .item(:class="(delays[i] === 0 ? 'visible ' : '') + $mq" :key="i")
@@ -81,14 +83,23 @@ export default class Education extends Vue {
 .education-container {
   max-width: 100%;
   display: grid;
-  align-content: center;
+  align-content: start;
+  grid-template-rows: 100px 1fr;
+  color: white;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  align-self: center;
 }
 
 .education {
   // margin: 30px;
-  color: white;
   display: grid;
   justify-content: center;
+  align-content: center;
 
   &.phone, *.tablet-portrait {
     grid-template-columns: 0px 2px 1fr;
