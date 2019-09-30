@@ -10,13 +10,13 @@
         .subtitle(v-show="!delays.subtitle" :class="$mq") {{ $t('intro.subtitle') }}
       .links
         transition(name="slide-left")
-          a.link(v-show="!delays.icons" href="https://github.com/Ludonope" alt="GitHub" title="GitHub")
+          a.link(v-show="!delays.icons" href="https://github.com/Ludonope" alt="GitHub" title="GitHub" target="_blank")
             img.logo(src="@/assets/img/logo-github.png")
         transition(name="slide-top")
-          a.link(v-show="!delays.icons" href="https://gitlab.com/Ludonope" alt="GitLab" title="GitLab")
-            img.logo(src="@/assets/img/logo-gitlab.png")
+          a.link(v-show="!delays.icons" href="https://www.linkedin.com/in/ludovicpetrenko/" alt="LinkedIn" title="LinkedIn"  target="_blank")
+            img.logo(src="@/assets/img/logo-linkedin.png")
         transition(name="slide-right")
-          a.link(v-show="!delays.icons" href="https://instagram.com/ludonope" alt="Instagram" title="Instagram")
+          a.link(v-show="!delays.icons" href="https://instagram.com/ludonope" alt="Instagram" title="Instagram"  target="_blank")
             img.logo(src="@/assets/img/logo-instagram.png")
 </template>
 
@@ -174,6 +174,7 @@ export default class Introduction extends Vue {
 }
 
 .slide-top-enter-active, .slide-top-leave-active,
+.slide-bottom-enter-active, .slide-bottom-leave-active,
 .slide-left-enter-active, .slide-left-leave-active,
 .slide-right-enter-active, .slide-right-leave-active {
   transition: all .6s cubic-bezier(.51,.92,.24,1);
@@ -182,6 +183,11 @@ export default class Introduction extends Vue {
 .slide-top-enter, .slide-top-leave-to {
   opacity: 0;
   transform: translateY(-100px);
+}
+
+.slide-bottom-enter, .slide-bottom-leave-to {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .slide-left-enter, .slide-left-leave-to {

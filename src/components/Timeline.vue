@@ -13,7 +13,8 @@
             a.link(
               v-for="link of item.links"
               :key="link.url"
-              :href="link.url") {{ link.label }}
+              :href="link.url"
+              target="_blank") {{ link.label }}
         .right(v-if="i%2")
 </template>
 
