@@ -19,12 +19,12 @@
       "description": "Un site web responsive, multilingue et animé que j'ai développé avec Vue.js, Typescript et mes connaissances."
     },
     "blt": {
-      "date": "Janvier 2018 - Juillet 2018",
-      "description": "Beach Launch Team est un club de fusée à ergols liquide basé sur le campus de la California State University Long Beach. J'ai développé le logiciel de visualisation en temps réel de la trajectoire du véhicule avec Cesium.js. J'ai également participé à une mise à feu statique et une tentative de décollage pour la compétition FAR-Mars. Au delà de l'expérience technique, ce club m'a permis de rencontrer des personnes incroyables."
+      "date": "Janvier 2019 - Juillet 2019",
+      "description": "Beach Launch Team est un club de fusée à ergols liquide basé sur le campus de la California State University Long Beach. J'ai développé un logiciel de visualisation en temps réel de la trajectoire du véhicule avec Cesium.js. J'ai également participé à une mise à feu statique et une tentative de décollage pour la compétition FAR-Mars. Au delà de l'expérience technique, ce club m'a permis de rencontrer des personnes incroyables."
     },
     "rematch": {
       "date": "Avril 2018 - Aujourd'hui",
-      "description": "Rematch est une application qui permet de capturer les meilleurs moments du sport amateur en un clic. J'ai conçu et implémenté le nouveau backend avec AWS (Lambda, API Gateway, Cognito, EC2) et Go. J'ai également mené la mise en oeuvre d'un nouveau frontend en Vue.js ainsi que son déploiement sur AWS (S3, Cloudfront)."
+      "description": "Rematch est une application qui permet de capturer les meilleurs moments du sport amateur en un clic. J'ai conçu et implémenté un nouveau backend avec AWS (Lambda, API Gateway, Cognito, EC2) et Go. J'ai également guidé la mise en oeuvre d'un nouveau frontend en Vue.js ainsi que son déploiement sur AWS (S3, Cloudfront)."
     },
     "manacore": {
       "date": "Septembre 2017 - Aujourd'hui",

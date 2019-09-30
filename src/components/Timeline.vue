@@ -173,7 +173,7 @@ export default class Timeline extends Vue {
 
   .description {
     margin-top: 5px;
-    max-width: 500px;
+    max-width: 540px;
   }
 }
 

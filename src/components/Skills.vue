@@ -1,7 +1,6 @@
 <template lang="pug">
   .skills-container
-    transition(name="fade")
-      .title(v-show="!delays[0]")  {{ $t('menu.skills') }}
+    .title(:class="delays[0] === 0 ? 'visible' : ''")  {{ $t('menu.skills') }}
     .skills(v-observe-visibility="visibilityChanged" :class="$mq")
       .item(v-for="(item, i) of items" :key="i")
         SkillBar(:enabled="!delays[i]" :name="item.name" :value="item.value")
@@ -123,5 +122,12 @@ export default class Timeline extends Vue {
   text-align: center;
   font-size: 20px;
   align-self: center;
+
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
 }
 </style>

@@ -1,7 +1,6 @@
 <template lang="pug">
   .education-container
-    transition(name="fade")
-      .title(v-show="!delays[0]") {{ $t('menu.education') }}
+    .title(:class="delays[0] === 0 ? 'visible': ''") {{ $t('menu.education') }}
     .education(v-observe-visibility="visibilityChanged")
       template(v-for="(item, i) of items")
         .item(:class="(delays[i] === 0 ? 'visible ' : '') + $mq" :key="i")
@@ -93,10 +92,16 @@ export default class Education extends Vue {
   text-align: center;
   font-size: 20px;
   align-self: center;
+
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .education {
-  // margin: 30px;
   display: grid;
   justify-content: center;
   align-content: center;
