@@ -35,14 +35,14 @@ export default class Education extends Vue {
   get items () {
     return [
       {
-        school: 'California State University Long Beach (USA)',
-        diploma: this.$t('educations.csulb.diploma'),
-        date: this.$t('educations.csulb.date')
-      },
-      {
         school: 'Epitech (France)',
         diploma: this.$t('educations.epitech.diploma'),
         date: this.$t('educations.epitech.date')
+      },
+      {
+        school: 'California State University Long Beach (USA)',
+        diploma: this.$t('educations.csulb.diploma'),
+        date: this.$t('educations.csulb.date')
       }
     ]
   }
