@@ -16,6 +16,29 @@ export default class Projects extends Vue {
   get items (): Item[] {
     return [
       {
+        title: 'Moonly',
+        date: this.$t('experiences.moonly.date'),
+        description: this.$t('experiences.moonly.description'),
+        links: [
+          {
+            label: this.$t('experiences.labels.website'),
+            url: 'https://moonlyapp.com/'
+          },
+          {
+            label: 'AppStore',
+            url: 'https://apps.apple.com/fr/app/moonly/id1511574452'
+          },
+          {
+            label: 'PlayStore',
+            url: 'https://play.google.com/store/apps/details?id=com.moonlyapp.app'
+          },
+          {
+            label: 'Instagram',
+            url: 'https://www.instagram.com/moonly_app/'
+          }
+        ]
+      },
+      {
         title: 'ludonope.com',
         date: this.$t('experiences.ludonope.date'),
         description: this.$t('experiences.ludonope.description'),

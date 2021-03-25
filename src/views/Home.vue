@@ -46,7 +46,7 @@ export default class Home extends Vue {
 }
 
 #projects {
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 
 // Display education and skill side by side or above each other

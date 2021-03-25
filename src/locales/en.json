@@ -7,12 +7,16 @@
     "contacts": "CONTACT"
   },
   "intro": {
-    "subtitle": "Full Stack Software Engineer",
+    "subtitle": "CEO | CTO @ Moonly",
     "bio": "At the age of 8, I searched “how to hack” on Google. This led me to discover the world of computer science and programming beginning with C, then later C++ and beyond. This allowed me to hone my skills with algorithms and object-oriented programming from a very young age. From then on, I have continued to follow this childhood dream, which has now become a full-fledged passion."
   },
   "experiences": {
     "labels": {
       "website": "Website"
+    },
+    "moonly": {
+      "date": "February 2020",
+      "description": "Mobile application to track the menstrual cycle using the symptothermal method. This method can be used for contraception (98% efficacy from the WHO), conception or observation."
     },
     "ludonope": {
       "date": "September 2019",

@@ -3,7 +3,7 @@
     div(v-observe-visibility="visibilityChanged")
     transition(name="fade" v-for="(text, i) of texts" :key="i")
       .text(v-show="!delays[i]") {{ text }}
-    .copyright Copyright 2019 Ludovic Petrenko
+    .copyright Copyright 2021 Ludovic Petrenko
 </template>
 
 <script lang="ts">
@@ -20,8 +20,7 @@ export default class Bio extends Vue {
     super()
     this.texts = [
       'Ludovic Petrenko',
-      'ludovic.petrenko@epitech.eu',
-      '(+33) 7 87 07 93 80'
+      'ludovic.petrenko@moonlyapp.com',
     ]
     this.delays = [200, 200, 200, 300]
   }
@@ -48,7 +47,7 @@ export default class Bio extends Vue {
   width: 100%;
   min-height: 110vh;
   display: grid;
-  grid-template-rows: 0px 60px 60px 60px;
+  grid-template-rows: 0px 60px 60px;
   justify-content: center;
   align-content: center;
   padding-top: 50px;
