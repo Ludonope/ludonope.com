@@ -1,5 +1,5 @@
 <template lang="pug">
-  Timeline(:items="items")
+Timeline(:items="items")
 </template>
 
 <script lang="ts">
@@ -34,12 +34,23 @@ export default class Projects extends Vue {
           },
           {
             label: 'Instagram',
-            url: 'https://www.instagram.com/moonly_app/'
+            url: 'https://www.instagram.com/moonly.health/'
           }
         ]
       },
       {
-        title: 'ludonope.com',
+        title: 'KBRW',
+        date: this.$t('experiences.kbrw.date'),
+        description: this.$t('experiences.kbrw.description'),
+        links: [
+          {
+            label: 'LinkedIn',
+            url: 'https://www.linkedin.com/company/kbrw/'
+          }
+        ]
+      },
+      {
+        title: 'ludonope.dev',
         date: this.$t('experiences.ludonope.date'),
         description: this.$t('experiences.ludonope.description'),
         links: [
@@ -80,17 +91,6 @@ export default class Projects extends Vue {
           {
             label: 'PlayStore',
             url: 'https://play.google.com/store/apps/details?id=fr.lapassevideo&hl=en'
-          }
-        ]
-      },
-      {
-        title: 'Manacore',
-        date: this.$t('experiences.manacore.date'),
-        description: this.$t('experiences.manacore.description'),
-        links: [
-          {
-            label: this.$t('experiences.labels.website'),
-            url: 'https://www.manacore.io/'
           }
         ]
       }

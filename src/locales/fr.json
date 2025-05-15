@@ -4,19 +4,25 @@
     "projects": "PROJETS",
     "education": "ÉDUCATION",
     "skills": "COMPÉTENCES",
-    "contacts": "CONTACT"
+    "contacts": "CONTACT",
+    "portfolio": "PORTFOLIO"
   },
   "intro": {
-    "subtitle": "CEO | CTO @ Moonly",
-    "bio": "À l’âge de 8 ans, je recherche sur Google “apprendre à hacker”. Je découvre alors le monde de l’informatique et la programmation grâce au siteduzero (ex openclassroom) avec le langage C, puis C++. Cela m’a permis d’acquérir très jeune des notions d’algorithmie et de programmation orientée objet. Depuis, je ne cesse de suivre ce rêve d’enfant, qui s’est aujourd’hui transformé en une véritable passion."
+    "subtitle": "Entrepreneur | Créateur",
+    "oldbio": "À l’âge de 8 ans, je recherche sur Google “apprendre à hacker”. Je découvre alors le monde de l’informatique et la programmation grâce au siteduzero (ex openclassroom) avec le langage C, puis C++. Cela m’a permis d’acquérir très jeune des notions d’algorithmie et de programmation orientée objet. Depuis, je ne cesse de suivre ce rêve d’enfant, qui s’est aujourd’hui transformé en une véritable passion.",
+    "bio": "Mon parcours a commencé avec ma passion pour les ordinateurs et les jeux vidéo, qui m'a conduit à découvrir la programmation dès mon plus jeune âge, puis à devenir entrepreneur. Cette expérience m'a permis de découvrir d'autres aspects créatifs que j'apprécie aujourd'hui, de l'édition d'images et de vidéos, à la production musicale ou la peinture. Toujours passionné par ce que je fais, mon énergie est alimentée par la création et le partage avec les autres."
   },
   "experiences": {
     "labels": {
       "website": "Site web"
     },
     "moonly": {
-      "date": "Février 2020",
-      "description": "Application mobile de suivi du cycle menstruel à l'aide de la méthode symptothermique. Cette méthode peut être utilisée en contraception (98 % d'efficacité selon l'OMS), conception ou observation."
+      "date": "Mars 2020 - Aujourd'hui",
+      "description": "Application mobile de suivi du cycle menstruel à l'aide de la méthode symptothermique. Cette méthode peut être utilisée en contraception (98 % d'efficacité selon l'OMS), conception ou observation. Plus de 70k utilisateurs. J'ai moi-même conçu et développé l'application en Flutter (Android et iOS) et le backend en Go avec AWS (Lambda, EC2, DynamoDB, S3, Cognito), Terraform, Docker, GitHub Actions, gRPC, Sentry. J'ai également managé un développeur junior."
+    },
+    "kbrw": {
+      "date": "Septembre 2019 - Mars 2020",
+      "description": "Solution de logistique et supply chain pour des grands groupes (LVMH, PSA, Total, Michelin, etc.). J'ai développé du frontend en React.js avec SSR et du backend en Elixir (Erlang)."
     },
     "ludonope": {
       "date": "Septembre 2019",
@@ -27,12 +33,8 @@
       "description": "Beach Launch Team est un club de fusée à ergols liquide basé sur le campus de la California State University Long Beach. J'ai développé un logiciel de visualisation en temps réel de la trajectoire du véhicule avec Cesium.js. J'ai également participé à une mise à feu statique et une tentative de décollage pour la compétition FAR-Mars. Au delà de l'expérience technique, ce club m'a permis de rencontrer des personnes incroyables."
     },
     "rematch": {
-      "date": "Avril 2018 - Aujourd'hui",
+      "date": "Avril 2018 - Janvier 2019",
       "description": "Rematch est une application qui permet de capturer les meilleurs moments du sport amateur en un clic. J'ai conçu et implémenté un nouveau backend avec AWS (Lambda, API Gateway, Cognito, EC2) et Go. J'ai également guidé la mise en oeuvre d'un nouveau frontend en Vue.js ainsi que son déploiement sur AWS (S3, Cloudfront)."
-    },
-    "manacore": {
-      "date": "Septembre 2017 - Aujourd'hui",
-      "description": "Manacore est un logiciel de gestion modulaire en SaaS qui fournit à votre entreprise une multitude de services faciles à utiliser et 100% personalisable. Manacore utilises l'écosystème AWS (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) et un système  spécifique de modules développé pour l'application web en Vue.js. Manacore est mon projet de fin d'études avec 5 autres étudiants d'Epitech. Sa conception est réalisée en partenariat avec l'Association des Paralysés de France."
     }
   },
   "educations": {
@@ -44,5 +46,12 @@
       "diploma": "Expert en Technologie de l'Information",
       "date": "2015 - 2020"
     }
+  },
+  "skills": {
+    "programming": "Programmation",
+    "communication": "Communication",
+    "photoshop": "Photoshop",
+    "video": "Montage vidéo",
+    "audio": "Production audio"
   }
 }

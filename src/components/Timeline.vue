@@ -1,21 +1,21 @@
 <template lang="pug">
-  .timeline-container
-    .timeline(v-observe-visibility="visibilityChanged")
-      .line(:style="lineStyle")
-      template(v-for="(item, i) of items")
-        .left(v-if="i%2 === 0")
-        .item(:class="itemClasses(i)" :key="i")
-          .dot
-          .title {{ item.title }}
-          .date {{ item.date }}
-          .description {{ item.description }}
-          .links
-            a.link(
-              v-for="link of item.links"
-              :key="link.url"
-              :href="link.url"
-              target="_blank") {{ link.label }}
-        .right(v-if="i%2")
+.timeline-container
+  .timeline(v-observe-visibility="visibilityChanged")
+    .line(:style="lineStyle")
+    template(v-for="(item, i) of items")
+      .left(v-if="i%2 === 0")
+      .item(:class="itemClasses(i)" :key="i")
+        .dot
+        .title {{ item.title }}
+        .date {{ item.date }}
+        .description {{ item.description }}
+        .links
+          a.link(
+            v-for="link of item.links"
+            :key="link.url"
+            :href="link.url"
+            target="_blank") {{ link.label }}
+      .right(v-if="i%2")
 </template>
 
 <script lang="ts">

@@ -1,55 +1,73 @@
 <template lang="pug">
-  .container
-    Particles.background
-    .content(:class="$mq")
-      transition(name="fade")
-        .title(v-show="!delays.title" :class="$mq")
-          .first LUDOVIC
-          .last PETRENKO
-      transition(name="slide")
-        .subtitle(v-show="!delays.subtitle" :class="$mq") {{ $t('intro.subtitle') }}
-      .links
-        transition(name="slide-left")
-          a.link(v-show="!delays.icons" href="https://github.com/Ludonope" alt="GitHub" title="GitHub" target="_blank")
-            img.logo(src="@/assets/img/logo-github.png")
-        transition(name="slide-top")
-          a.link(v-show="!delays.icons" href="https://www.linkedin.com/in/ludovicpetrenko/" alt="LinkedIn" title="LinkedIn"  target="_blank")
-            img.logo(src="@/assets/img/logo-linkedin.png")
-        transition(name="slide-right")
-          a.link(v-show="!delays.icons" href="https://instagram.com/ludonope" alt="Instagram" title="Instagram"  target="_blank")
-            img.logo(src="@/assets/img/logo-instagram.png")
+.container
+  Particles.background
+  .content(:class="$mq")
+    transition(name="fade")
+      .title(v-show="!delays.title", :class="$mq")
+        .first LUDOVIC
+        .last PETRENKO
+    transition(name="slide")
+      .subtitle(v-show="!delays.subtitle", :class="$mq") {{ $t("intro.subtitle") }}
+    .links
+      transition(name="slide-left")
+        a.link(
+          v-show="!delays.icons",
+          href="https://github.com/Ludonope",
+          alt="GitHub",
+          title="GitHub",
+          target="_blank"
+        )
+          img.logo(src="@/assets/img/logo-github.png")
+      transition(name="slide-top")
+        a.link(
+          v-show="!delays.icons",
+          href="https://www.linkedin.com/in/ludovicpetrenko/",
+          alt="LinkedIn",
+          title="LinkedIn",
+          target="_blank"
+        )
+          img.logo(src="@/assets/img/logo-linkedin.png")
+      transition(name="slide-right")
+        a.link(
+          v-show="!delays.icons",
+          href="https://youtube.com/@ludonope",
+          alt="YouTube",
+          title="YouTube",
+          target="_blank"
+        )
+          img.logo(src="@/assets/img/logo-youtube.png")
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
-import Particles from '@/components/Particles.vue'
+import Vue from "vue";
+import Component from "vue-class-component";
+import Particles from "@/components/Particles.vue";
 
 @Component({
-  name: 'Introduction',
+  name: "Introduction",
   components: {
-    Particles
-  }
+    Particles,
+  },
 })
 export default class Introduction extends Vue {
-  delays: any
+  delays: any;
 
-  constructor () {
-    super()
+  constructor() {
+    super();
     this.delays = {
       title: 500,
       subtitle: 200,
-      icons: 1000
-    }
+      icons: 1000,
+    };
   }
 
-  mounted () {
-    let sum = 0
+  mounted() {
+    let sum = 0;
     for (const delay in this.delays) {
-      sum += this.delays[delay]
+      sum += this.delays[delay];
       setTimeout(() => {
-        this.delays[delay] = 0
-      }, sum)
+        this.delays[delay] = 0;
+      }, sum);
     }
   }
 }
@@ -83,7 +101,8 @@ export default class Introduction extends Vue {
   grid-template-rows: 30% 14% 56%;
   height: 360px;
 
-  &.phone, &.tablet-portrait {
+  &.phone,
+  &.tablet-portrait {
     height: 290px;
   }
   z-index: 0;
@@ -105,15 +124,15 @@ export default class Introduction extends Vue {
   &.phone {
     font-size: 33px;
   }
-  
+
   .first {
     grid-column: 1 / 2;
-    font-family: 'ZwizzRegular', 'Roboto', 'Arial';
+    font-family: "ZwizzRegular", "Roboto", "Arial";
   }
 
   .last {
     grid-column: 2 / 3;
-    font-family: 'ZwizzBold', 'Roboto', 'Arial';
+    font-family: "ZwizzBold", "Roboto", "Arial";
   }
 
   .all {
@@ -123,7 +142,7 @@ export default class Introduction extends Vue {
 }
 
 .subtitle {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 40px;
   &.tablet-portrait {
     font-size: 30px;
@@ -147,9 +166,8 @@ export default class Introduction extends Vue {
       width: 40px;
       height: 40px;
       padding: 2px;
-      transition: all .1s ease-in-out;
+      transition: all 0.1s ease-in-out;
     }
-
 
     &:hover {
       .logo {
@@ -163,37 +181,47 @@ export default class Introduction extends Vue {
 </style>
 
 <style lang="scss">
-.slide-enter-active, .slice-leave-active {
-  transition: all .8s ease-in-out;
+.slide-enter-active,
+.slice-leave-active {
+  transition: all 0.8s ease-in-out;
 }
-.slide-enter, .slide-leave-to {
+.slide-enter,
+.slide-leave-to {
   opacity: 0;
   transform: translateY(-50px);
 }
 
-.slide-top-enter-active, .slide-top-leave-active,
-.slide-bottom-enter-active, .slide-bottom-leave-active,
-.slide-left-enter-active, .slide-left-leave-active,
-.slide-right-enter-active, .slide-right-leave-active {
-  transition: all .6s cubic-bezier(.51,.92,.24,1);
+.slide-top-enter-active,
+.slide-top-leave-active,
+.slide-bottom-enter-active,
+.slide-bottom-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
 }
 
-.slide-top-enter, .slide-top-leave-to {
+.slide-top-enter,
+.slide-top-leave-to {
   opacity: 0;
   transform: translateY(-100px);
 }
 
-.slide-bottom-enter, .slide-bottom-leave-to {
+.slide-bottom-enter,
+.slide-bottom-leave-to {
   opacity: 0;
   transform: translateY(100px);
 }
 
-.slide-left-enter, .slide-left-leave-to {
+.slide-left-enter,
+.slide-left-leave-to {
   opacity: 0;
   transform: translateX(-100px);
 }
 
-.slide-right-enter, .slide-right-leave-to {
+.slide-right-enter,
+.slide-right-leave-to {
   opacity: 0;
   transform: translateX(100px);
 }

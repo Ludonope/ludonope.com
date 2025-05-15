@@ -1,12 +1,12 @@
 <template lang="pug">
-  .home
-    Introduction.section#intro
-    Bio.section#description
-    Projects.section#projects
-    .semi-section.eduskills(:class="$mq")
-      Education#education
-      Skills#skills
-    Contacts.quarter-section#contacts
+.home
+  Introduction.section#intro
+  Bio.section#description
+  Projects.section#projects
+  .semi-section.eduskills(:class="$mq")
+    Education#education
+    Skills#skills
+  Contacts.quarter-section#contacts
 </template>
 
 <script lang="ts">

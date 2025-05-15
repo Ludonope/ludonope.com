@@ -1,12 +1,12 @@
 <template lang="pug">
-  .education-container
-    .title(:class="delays[0] === 0 ? 'visible': ''") {{ $t('menu.education') }}
-    .education(v-observe-visibility="visibilityChanged")
-      template(v-for="(item, i) of items")
-        .item(:class="(delays[i] === 0 ? 'visible ' : '') + $mq" :key="i")
-          .school {{ item.school }}
-          .diploma {{ item.diploma }}
-          .date {{ item.date }}
+.education-container
+  .title(:class="delays[0] === 0 ? 'visible': ''") {{ $t('menu.education') }}
+  .education(v-observe-visibility="visibilityChanged")
+    template(v-for="(item, i) of items")
+      .item(:class="(delays[i] === 0 ? 'visible ' : '') + $mq" :key="i")
+        .school {{ item.school }}
+        .diploma {{ item.diploma }}
+        .date {{ item.date }}
 </template>
 
 <script lang="ts">

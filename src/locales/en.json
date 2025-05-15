@@ -4,19 +4,25 @@
     "projects": "PROJECTS",
     "education": "EDUCATION",
     "skills": "SKILLS",
-    "contacts": "CONTACT"
+    "contacts": "CONTACT",
+    "portfolio": "PORTFOLIO"
   },
   "intro": {
-    "subtitle": "CEO | CTO @ Moonly",
-    "bio": "At the age of 8, I searched “how to hack” on Google. This led me to discover the world of computer science and programming beginning with C, then later C++ and beyond. This allowed me to hone my skills with algorithms and object-oriented programming from a very young age. From then on, I have continued to follow this childhood dream, which has now become a full-fledged passion."
+    "subtitle": "Entrepreneur | Creator",
+    "oldbio": "At the age of 8, I searched “how to hack” on Google. This led me to discover the world of computer science and programming beginning with C, then later C++ and beyond. This allowed me to hone my skills with algorithms and object-oriented programming from a very young age. From then on, I have continued to follow this childhood dream, which has now become a full-fledged passion.",
+    "bio": "My journey started with my love for computers and video games, which led me to discover programming at a young age and later to become an entrepreneur. This experience made me discover other creative aspects that I now thouroughly enjoy, from image and video editing, to music production or painting. Always passionate about what I do, my energy is fueled by building, creating and sharing with others."
   },
   "experiences": {
     "labels": {
       "website": "Website"
     },
     "moonly": {
-      "date": "February 2020",
-      "description": "Mobile application to track the menstrual cycle using the symptothermal method. This method can be used for contraception (98% efficacy from the WHO), conception or observation."
+      "date": "March 2020 - Today",
+      "description": "Mobile application to track the menstrual cycle using the symptothermal method. This method can be used for contraception (98% efficacy from the WHO), conception or observation. More than 70k users. I fully designed and developped from scratch the application in Flutter (Android and iOS) and its backend in Go with AWS (Lambda, EC2, DynamoDB, S3, Cognito), Terraform, Docker, Github Actions, gRPC, Sentry. I also managed a junior developer and a collaborator."
+    },
+    "kbrw": {
+      "date": "September 2019 - March 2020",
+      "description": "Logistics and supply chain solutions for big corporations (LVMH, PSA, Total, Michelin, etc.). I developed using React.js with SSR in frontend and Elixir (Erlang) in backend."
     },
     "ludonope": {
       "date": "September 2019",
@@ -27,12 +33,8 @@
       "description": "Beach Launch Team is a liquid-fueled rocketry club at California State University Long Beach. I developed a live vehicle trajectory visualization software using Cesium.js. I also participated to a static fire and launch attempt for the FAR-Mars competition. Moreover, that experience allowed me to meet incredible people, and further my computer science skills."
     },
     "rematch": {
-      "date": "April 2018 - Today",
+      "date": "April 2018 - January 2019",
       "description": "Rematch is an app which allows you to easily capture the best moments of amateur sport. I led the setup of a new backend using AWS (Lambda, API Gateway, Cognito, EC2) and Go. I also helped guide the setup of the new frontend in Vue.js and deployment on AWS (S3, Cloudfront)."
-    },
-    "manacore": {
-      "date": "September 2017 - Today",
-      "description": "Manacore is a powerful modular ERP SaaS that provides your company with a collection of easy to use services, 100% customizable - it uses the AWS ecosystem (Lambda, API Gateway, Cognito, Cloudfront, S3, SNS, SQS) and a homemade module system in Vue.js. This is my senior project that I'm working on with 5 other Epitech students. It is developed in partnership with the \"Association des Paralysés de France\" (French association for paralyzed individuals)."
     }
   },
   "educations": {
@@ -44,5 +46,12 @@
       "diploma": "Graduate Diploma in Information Technology",
       "date": "2015 - 2020"
     }
+  },
+  "skills": {
+    "programming": "Programming",
+    "communication": "Communication",
+    "photoshop": "Photoshop",
+    "video": "Video editing",
+    "audio": "Audio production"
   }
 }

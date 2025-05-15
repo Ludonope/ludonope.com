@@ -1,7 +1,7 @@
 <template lang="pug">
-  .container
-    img(src="@/assets/img/FR.png" @click="pick('fr')")
-    img(src="@/assets/img/US.png" @click="pick('en')")
+.container
+  img(src="@/assets/img/FR.png" @click="pick('fr')")
+  img(src="@/assets/img/US.png" @click="pick('en')")
 </template>
 
 <script lang="ts">

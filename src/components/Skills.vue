@@ -1,92 +1,92 @@
 <template lang="pug">
-  .skills-container
-    .title(:class="delays[0] === 0 ? 'visible' : ''")  {{ $t('menu.skills') }}
-    .skills(v-observe-visibility="visibilityChanged" :class="$mq")
-      .item(v-for="(item, i) of items" :key="i")
-        SkillBar(:enabled="!delays[i]" :name="item.name" :value="item.value")
+.skills-container
+  .title(:class="delays[0] === 0 ? 'visible' : ''") {{ $t("menu.skills") }}
+  .skills(v-observe-visibility="visibilityChanged", :class="$mq")
+    .item(v-for="(item, i) of items", :key="i")
+      SkillBar(
+        :enabled="!delays[i]",
+        :name="$t('skills.' + item.name)",
+        :value="item.value"
+      )
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
-import { LocaleMessage } from 'vue-i18n'
-import SkillBar from '@/components/SkillBar.vue'
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { LocaleMessage } from "vue-i18n";
+import SkillBar from "@/components/SkillBar.vue";
 
 export interface Item {
-  skill: string|LocaleMessage
-  value: number
+  skill: string | LocaleMessage;
+  value: number;
 }
 
 @Component({
-  name: 'Skills',
+  name: "Skills",
   components: {
-    SkillBar
-  }
+    SkillBar,
+  },
 })
 export default class Timeline extends Vue {
-  $mq: any
-  delays: number[]
+  $mq: any;
+  delays: number[];
 
-  constructor () {
-    super()
-    this.delays = []
+  constructor() {
+    super();
+    this.delays = [];
   }
 
-  get items () {
+  get items() {
     return [
       {
-        name: 'AWS',
-        value: 0.8
+        name: "programming",
+        value: 0.92,
       },
       {
-        name: 'Go',
-        value: 0.85
+        name: "communication",
+        value: 0.8,
       },
       {
-        name: 'Vue.js',
-        value: 0.95
+        name: "video",
+        value: 0.55,
       },
       {
-        name: 'Modern C++',
-        value: 0.9
+        name: "photoshop",
+        value: 0.63,
       },
       {
-        name: 'C',
-        value: 0.88
+        name: "audio",
+        value: 0.47,
       },
-      {
-        name: 'Docker/Terraform',
-        value: 0.7
-      }
-    ]
+    ];
   }
 
-  mounted () {
-    this.delays = new Array(this.items.length).fill(80)
+  mounted() {
+    this.delays = new Array(this.items.length).fill(80);
   }
 
-  resetDelays () {
+  resetDelays() {
     for (const i in this.delays) {
-      Vue.set(this.delays, i, 80)
+      Vue.set(this.delays, i, 80);
     }
   }
 
-  revealItems () {
-    const items = this.items ? this.items.length : 0
-    let sum = 500
-    let j = 0
+  revealItems() {
+    const items = this.items ? this.items.length : 0;
+    let sum = 500;
+    let j = 0;
     for (const i in this.items) {
-      sum += this.delays[i]
+      sum += this.delays[i];
       setTimeout(() => {
-        Vue.set(this.delays, i, 0)
-      }, sum)
+        Vue.set(this.delays, i, 0);
+      }, sum);
     }
   }
 
-  visibilityChanged (isVisible: boolean, entry: any) {
+  visibilityChanged(isVisible: boolean, entry: any) {
     if (isVisible) {
-      this.revealItems()
+      this.revealItems();
     } else if (entry.boundingClientRect.top >= 0) {
-      this.resetDelays()
+      this.resetDelays();
     }
   }
 }
@@ -122,7 +122,7 @@ export default class Timeline extends Vue {
   align-self: center;
 
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 
   &.visible {
     opacity: 1;

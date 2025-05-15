@@ -1,41 +1,38 @@
 <template lang="pug">
-  .contacts-section(:class="$mq")
-    div(v-observe-visibility="visibilityChanged")
-    transition(name="fade" v-for="(text, i) of texts" :key="i")
-      .text(v-show="!delays[i]") {{ text }}
-    .copyright Copyright 2021 Ludovic Petrenko
+.contacts-section(:class="$mq")
+  div(v-observe-visibility="visibilityChanged")
+  transition(name="fade", v-for="(text, i) of texts", :key="i")
+    .text(v-show="!delays[i]") {{ text }}
+  .copyright Copyright 2025 Ludovic Petrenko
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from "vue-property-decorator";
 
 @Component({
-  name: 'Contacts'
+  name: "Contacts",
 })
 export default class Bio extends Vue {
-  delays: number[]
-  texts: string[]
+  delays: number[];
+  texts: string[];
 
-  constructor () {
-    super()
-    this.texts = [
-      'Ludovic Petrenko',
-      'ludovic.petrenko@moonlyapp.com',
-    ]
-    this.delays = [200, 200, 200, 300]
+  constructor() {
+    super();
+    this.texts = ["Ludovic Petrenko", "ludovic.petrenko@outlook.com"];
+    this.delays = [200, 200, 200, 300];
   }
 
-  visibilityChanged (isVisible: boolean, entry: any) {
+  visibilityChanged(isVisible: boolean, entry: any) {
     if (isVisible) {
-      let sum = 800
+      let sum = 800;
       for (let i in this.delays) {
-        sum += this.delays[i]
+        sum += this.delays[i];
         setTimeout(() => {
-          Vue.set(this.delays, i, 0)
-        }, sum)
+          Vue.set(this.delays, i, 0);
+        }, sum);
       }
     } else if (entry.boundingClientRect.top >= 0) {
-      Vue.set(this, 'delays', [200, 300, 300, 300])
+      Vue.set(this, "delays", [200, 300, 300, 300]);
     }
   }
 }
@@ -53,7 +50,8 @@ export default class Bio extends Vue {
   padding-top: 50px;
   position: relative;
 
-  &.phone, &.tablet-portrait {
+  &.phone,
+  &.tablet-portrait {
     padding-bottom: 100px;
   }
 }

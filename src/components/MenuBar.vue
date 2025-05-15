@@ -1,16 +1,16 @@
 <template lang="pug">
-  div
-    .main-menu
-      div
-      .menu-buttons
-        router-link.menu-button(
-          v-for="(opt, i) of menuOptions"
-          :key="i"
-          :to="opt.link"
-        )
-          .link {{ opt.label }}
-          .underline
-      LangPicker
+div
+  .main-menu
+    div
+    .menu-buttons
+      router-link.menu-button(
+        v-for="(opt, i) of menuOptions"
+        :key="i"
+        :to="opt.link"
+      )
+        .link {{ opt.label }}
+        .underline
+    LangPicker
 </template>
 
 <script lang="ts">
@@ -44,6 +44,10 @@ export default class MenuBar extends Vue {
       {
         label: this.$t('menu.contacts'),
         link: '#contacts'
+      // },
+      // {
+      //   label: this.$t('menu.portfolio'),
+      //   link: '/portfolio'
       }
     ]
   }
